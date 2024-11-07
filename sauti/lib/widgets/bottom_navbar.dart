@@ -1,7 +1,7 @@
 // import 'package:customers/screens/Pages/searchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:sauti/screens/chat_screen.dart';
-import 'package:sauti/screens/profile_screen.dart';
+import 'package:sauti/screens/main_screen.dart';
 import 'package:sauti/screens/sst_scren.dart';
 import 'package:sauti/screens/tts_screen.dart';
 
@@ -15,11 +15,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> _pages() {
     return [
+      MainScreen(),
       VideoTextScreen(),
       STTScreen(),
       // SearchScreen(),
       TTSScreen(),
-      MainScreen(),
     ];
   }
 
@@ -37,10 +37,17 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.chat,
+              Icons.home,
               color: Colors.blue,
             ),
-            label: 'chats',
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.video_call,
+              color: Colors.blue,
+            ),
+            label: 'video',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -51,17 +58,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.message,
+              Icons.chat,
               color: Colors.blue,
             ),
-            label: 'Text',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.blue,
-            ),
-            label: 'Profile',
+            label: 'text',
           ),
         ],
         currentIndex: _selectedIndex,
