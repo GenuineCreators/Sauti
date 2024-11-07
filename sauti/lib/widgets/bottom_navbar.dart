@@ -19,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       STTScreen(),
       // SearchScreen(),
       TTSScreen(),
-      ProfileScreen(),
+      MainScreen(),
     ];
   }
 
