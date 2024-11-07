@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> _pages() {
     return [
-      chatScreen(),
+      VideoTextScreen(),
       STTScreen(),
       // SearchScreen(),
       TTSScreen(),
