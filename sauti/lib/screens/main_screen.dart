@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sauti/screens/chat_screen.dart';
+import 'package:sauti/screens/sst_scren.dart';
+import 'package:sauti/screens/tts_screen.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -26,7 +29,11 @@ class MainScreen extends StatelessWidget {
                 children: [
                   buildContainer(context, 'assets/video.png', 'Video Caption',
                       () {
-                    print('Video Caption clicked!');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => VideoTextScreen()),
+                    );
                   }),
                   buildContainer(
                       context, 'assets/sign_language.jpg', 'Sign Language', () {
@@ -41,12 +48,18 @@ class MainScreen extends StatelessWidget {
                   buildContainer(
                       context, 'assets/text_to_speech.jpg', 'Text To Speech',
                       () {
-                    print('Text To Speech clicked!');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TTSScreen()),
+                    );
                   }),
                   buildContainer(
                       context, 'assets/speech_to_text.jpg', 'Speech to Text',
                       () {
-                    print('Speech to Text clicked!');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => STTScreen()),
+                    );
                   }),
                 ],
               ),
